@@ -4,51 +4,57 @@ h1{color:rgb(245, 244, 248)}
 
 p {color:rgb(243, 247, 245)}
 
-.navlinks a{
-            color:rgb(245, 252, 252);
-            text-decoration: none;
-            }
+.navlinks {
+        list-style: none;
+        margin: 0;
+        background: tomato;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: flex-end;
+      }
+      
+      .navlinks a {
+        text-decoration: none;
+        display: block;
+        padding: 1em;
+        color: white;
+      }
+      
+      .navlinks a:hover {
+        background: darken(tomato, 2%);
+      }
+      
+      @media all and (max-width: 800px) {
+        .navlinks {
+          justify-content: space-around;
+        }
+      }
+      
+      @media all and (max-width: 600px) {
+        .navlinks {
+          flex-flow: column wrap;
+          padding: 0;
+        }
+      
+        .navlinks a {
+          text-align: center;
+          padding: 10px;
+          border-top: 1px solid rgba(255, 255, 255, 0.3);
+          border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+        }
+      
+        .navlinks li:last-of-type a {
+          border-bottom: none;
+        }
+      }
+      
+.corenav {
+          background: rgb(13, 236, 68);
+          display: flex;
+          justify-content: flex-start;
+          margin: 0;
+          text-decoration: none;
+          color: blanchedalmond;
+          padding: 1%;
 
-.flex-container {
-
-            padding: 0;
-              
-            margin: 0;
-              
-            list-style: none;
-              
-            display: flex;
-              
-            flex-flow: row wrap;
-              
-            justify-content: space-around;
-              
-            }
-              
-               
-              
-    .flex-item {
-              
-            background: tomato;
-              
-            padding: 5px;
-              
-            width: 200px;
-              
-            height: 150px;
-              
-            margin-top: 10px;
-              
-               
-              
-            line-height: 150px;
-              
-            color: white;
-              
-            font-weight: bold;
-              
-            font-size: 1em;
-              
-            text-align: center;
-              
-              }
+        }
